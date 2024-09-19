@@ -21,6 +21,14 @@ module.exports = async (req, res) => {
                     await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}. You can type /game to start.`);
                 }
             }
+            //Handle /help command to provide a tutorial
+            if (update.message && update.message.text === '/help') {
+                const chatId = update.message.from.id;
+            
+                // Send a tutorial message
+                await bot.sendMessage(chatId, `Here’s how to play ${gameName}:\n\n1. Start the game by typing /game.\n2. Play the game using the provided controls.\n3. Enjoy!\n\nIf you need further assistance, feel free to reach out.`);
+            }
+            
 
             // Handle /start or /game command
             if (update.message && (update.message.text === '/start' || update.message.text === '/game')) {
