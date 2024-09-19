@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
                 const chatId = update.message.from.id;
 
                 // Use the URL to the image hosted on Vercel
-                const helpImageUrl = "https://i-ai-robot-build.vercel.app/images/Tutorial1.png";  // Replace with your actual Vercel URL
+                const helpImageUrl = "https://i-ai-robot-build.vercel.app/images/Tutorial1_converted.jpg";  // Replace with your actual Vercel URL
             
                 // Send the image with a caption
                 await bot.sendPhoto(chatId, helpImageUrl, {
