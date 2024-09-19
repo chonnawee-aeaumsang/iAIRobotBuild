@@ -26,20 +26,9 @@ module.exports = async (req, res) => {
             if (update.message && (update.message.text === '/start' || update.message.text === '/game')) {
                 const chatId = update.message.from.id;
                 const firstName = update.message.from.first_name;
-
-                await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`, {
-                    reply_markup: {
-                        inline_keyboard: [
-                            [{
-                                text: "Play",
-                                callback_game: {},
-                            }]
-                        ]
-                    }
-                }),
                 
-                //await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
-                //await bot.sendGame(update.message.from.id, gameName);
+                await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
+                await bot.sendGame(update.message.from.id, gameName);
             }
 
             // Handle callback query for the Play button
