@@ -11,6 +11,17 @@ module.exports = async (req, res) => {
         const update = req.body;
 
         try {
+            // Detect when the bot is added or the user's first interaction
+            if (update.my_chat_member) {
+                const chatId = update.my_chat_member.chat.id;
+                const firstName = update.my_chat_member.from.first_name;
+
+                if (update.my_chat_member.new_chat_member.status === 'member') {
+                    // Send a welcome message when the user adds the bot for the first time
+                    await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}. You can type /game to start.`);
+                }
+            }
+
             // Handle /start or /game command
             if (update.message && (update.message.text === '/start' || update.message.text === '/game')) {
                 await bot.sendGame(update.message.from.id, gameName);
