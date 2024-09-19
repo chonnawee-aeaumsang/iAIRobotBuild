@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
             
                 // Send the image with a caption
                 await bot.sendPhoto(chatId, helpImageUrl, {
-                    caption: `Here’s how to play ${gameName}:\n\n*You can start the game by typing \\/game or \\/start\\.*`,
+                    caption: `*Here’s how to play ${gameName}:*\n\n*You can start the game by typing \\/game or \\/start\\.*`,
                     parse_mode: 'MarkdownV2'  // Using MarkdownV2 with correct escaping
                 });
             }
