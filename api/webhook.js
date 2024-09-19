@@ -21,19 +21,20 @@ module.exports = async (req, res) => {
                     await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}. You can type /game to start.`);
                 }
             }
+
             //Handle /help command to provide a tutorial
-            //if (update.message && update.message.text === '/help') {
-                //const chatId = update.message.from.id;
+            if (update.message && update.message.text === '/help') {
+                const chatId = update.message.from.id;
 
                 // Use the URL to the image hosted on Vercel
-                //const helpImageUrl = "https://i-ai-robot-build.vercel.app/images/Tutorial1_converted.jpg";  // Replace with your actual Vercel URL
+                const helpImageUrl = "https://i-ai-robot-build.vercel.app/images/Tutorial1_converted.jpg";  // Replace with your actual Vercel URL
             
                 // Send the image with a caption
-                //await bot.sendPhoto(chatId, helpImageUrl, {
-                    //caption: `*Here’s how to play ${gameName}:*\n\n*You can start the game by typing \\/game or \\/start\\.*`,
-                    //parse_mode: 'MarkdownV2'  // Using MarkdownV2 with correct escaping
-                //});
-            //}
+                await bot.sendPhoto(chatId, helpImageUrl, {
+                    caption: `*Here’s how to play ${gameName}:*\n\n*You can start the game by typing \\/game or \\/start\\.*`,
+                    parse_mode: 'MarkdownV2'  // Using MarkdownV2 with correct escaping
+                });
+            }
             
 
             // Handle /start or /game command
