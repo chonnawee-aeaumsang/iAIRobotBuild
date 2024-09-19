@@ -24,14 +24,9 @@ module.exports = async (req, res) => {
             //Handle /help command to provide a tutorial
             if (update.message && update.message.text === '/help') {
                 const chatId = update.message.from.id;
-
-                // Use the URL to the image hosted on Vercel
-                const helpImageUrl = "https://i-ai-robot-build.vercel.app/images/tutorial1.png";  // Replace with your actual Vercel URL
             
-                // Send the image with a caption
-                await bot.sendPhoto(chatId, helpImageUrl, {
-                    caption: `Here’s how to play ${gameName}:\n\n1. Start the game by typing /game.\n2. Play the game using the provided controls.\n3. Enjoy!\n\nIf you need further assistance, feel free to reach out.`
-                });
+                // Send a tutorial message
+                await bot.sendMessage(chatId, `Here’s how to play ${gameName}:\n\n1. Start the game by typing /game /start.\n2. Play the game using the provided controls.\n3. Enjoy!\n\nIf you need further assistance, feel free to reach out.`);
             }
             
 
