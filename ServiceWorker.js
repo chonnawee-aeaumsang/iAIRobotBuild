@@ -1,9 +1,9 @@
-const cacheName = "iAI-iAI Clicker-1.3.2";
+const cacheName = "iAI-iAI Clicker-1.3.3";
 const contentToCache = [
-    "Build/iAISwipe.loader.js",
-    "Build/iAISwipe.framework.js",
-    "Build/iAISwipe.data",
-    "Build/iAISwipe.wasm",
+    "Build/deploy.loader.js",
+    "Build/deploy.framework.js",
+    "Build/deploy.data",
+    "Build/deploy.wasm",
     "TemplateData/style.css"
 
 ];
