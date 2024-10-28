@@ -37,6 +37,16 @@ module.exports = async (req, res) => {
                 //});
             //}
             
+
+            // Handle /game command
+            if (update.message && (update.message.text === '/game')) {
+                const chatId = update.message.from.id;
+                const firstName = update.message.from.first_name;
+                
+                await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
+                await bot.sendGame(update.message.from.id, gameName);
+            }
+
             // Handle /start
             if (update.message && (update.message.text === '/start')) {
                 const chatId = update.message.from.id;
@@ -67,6 +77,7 @@ A fun Telegram game where you collect iAI tokens, upgrade your strategy, and com
         console.error("Error sending welcome message:", error);
     }
 
+                //await bot.sendGame(update.message.from.id, gameName);
             }
 
             // Handle callback query for the Play button
@@ -80,7 +91,6 @@ A fun Telegram game where you collect iAI tokens, upgrade your strategy, and com
                     await bot.answerCallbackQuery({callback_query_id: query_id, url: gameUrl + `?query_id=${query_id}&id=${userID}&first_name=${firstName}`});
                 }
             }
-
             // Ensure response is sent only once
             res.status(200).send('OK');
         } catch (error) {
@@ -90,5 +100,5 @@ A fun Telegram game where you collect iAI tokens, upgrade your strategy, and com
     } else {
         res.status(405).send('Method Not Allowed');
     }
-};
+}
 
