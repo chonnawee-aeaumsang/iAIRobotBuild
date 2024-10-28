@@ -50,15 +50,10 @@ module.exports = async (req, res) => {
                 if (update.callback_query.game_short_name.toLowerCase() !== gameName.toLowerCase()) {
                     await bot.answerCallbackQuery(update.callback_query.id, `Sorry, '${update.callback_query.game_short_name}' is not available.`);
                 } else {
-                    await bot.answerCallbackQuery({
-                        callback_query_id: update.callback_query.id,
-                        url: gameUrl,
-                    });
-
                     const query_id = update.callback_query.id;
                     const firstName = update.callback_query.from.first_name;
                     const userID = update.callback_query.from.id;
-                    await answerCallbackQuery(query_id, gameUrl + `?query_id=${query_id}&id=${userID}&first_name=${firstName}`);
+                    await bot.answerCallbackQuery({callback_query_id: query_id, url: gameUrl + `?query_id=${query_id}&id=${userID}&first_name=${firstName}`});
                 }
             }
 
