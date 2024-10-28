@@ -3,7 +3,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = "7498251188:AAGYxE1L2aGuTXx-VdjQHZn9UQRSK6svJmw";
 const gameName = "iAIGame"; // Replace with your game's short name
 const gameUrl = "https://i-ai-robot-build.vercel.app/"; // Your game URL
-//const imageUrl = " "
+const imageUrl = "https://imgur.com/ZGgcA9c"
 
 const bot = new TelegramBot(TOKEN, { polling: false });
 
@@ -71,7 +71,7 @@ A fun Telegram game where you collect iAI tokens, upgrade your strategy, and com
 
     try {
         // Send the welcome image with a caption
-        //await bot.sendPhoto(chatId, imageUrl);
+        await bot.sendPhoto(chatId, imageUrl);
         await bot.sendMessage(chatId, welcomeMessage, { parse_mode: 'MarkdownV2' });
     } catch (error) {
         console.error("Error sending welcome message:", error);
