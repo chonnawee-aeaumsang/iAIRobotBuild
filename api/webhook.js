@@ -3,7 +3,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = "7498251188:AAGYxE1L2aGuTXx-VdjQHZn9UQRSK6svJmw";
 const gameName = "iAIGame"; // Replace with your game's short name
 const gameUrl = "https://i-ai-robot.vercel.app/"; // Your game URL
-const imageUrl = "https://imgur.com/ZGgcA9c"
+const imageUrl = "https://imgur.com/a/tLemH6f"
 
 const bot = new TelegramBot(TOKEN, { polling: false });
 
@@ -67,7 +67,7 @@ A fun Telegram game where you collect iAI tokens, upgrade your strategy, and com
 🎁 Complete quests for extra rewards  
 🏆 *Top 10* leaderboard winners share a *$3,000 USDT Prize Pool\\!*
 
-*Ready to play?* Hit "/game" and start earning\\! 🔥`;
+*Ready to play?* Hit "Play Game 🎮" and start earning\\! 🔥`;
 
     try {
         // Send the welcome image with a caption
