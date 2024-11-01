@@ -67,7 +67,7 @@ A fun Telegram game where you collect iAI tokens, upgrade your strategy, and com
 🎁 Complete quests for extra rewards  
 🏆 *Top 10* leaderboard winners share a *$3,000 USDT Prize Pool\\!*
 
-*Ready to play?* Hit "Play Game 🎮" and start earning\\! 🔥`;
+*Ready to play?* Hit "*Play Game* 🎮" and start earning\\! 🔥`;
 
     try {
         // Send the welcome image with a caption
