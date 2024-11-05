@@ -2,7 +2,7 @@ const TelegramBot = require("node-telegram-bot-api");
 
 const TOKEN = "7498251188:AAGYxE1L2aGuTXx-VdjQHZn9UQRSK6svJmw";
 const gameName = "iAIGame"; // Replace with your game's short name
-const gameUrl = "https://i-ai-robot.vercel.app/"; // Your game URL
+const gameUrl = "https://iai-robot.vercel.app/"; // Your game URL
 const imageUrl = "https://imgur.com/a/tLemH6f"
 
 const bot = new TelegramBot(TOKEN, { polling: false });
