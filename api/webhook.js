@@ -42,21 +42,19 @@ module.exports = async (req, res) => {
                 const firstName = update.message.from.first_name;
                             
     // Escape necessary characters for MarkdownV2
-    const welcomeMessage = `🎮 *Welcome to the iAI Robot Game\\!* 🚀
-A fun Telegram game where you collect iAI tokens, upgrade your strategy, and compete for rewards\\! 💰
+    const welcomeMessage = `🛠 Temporary Maintenance for iAI Robot Game 🛠
 
-*How to Play*  
-🕹 *Swipe & Collect\\:* Start with 1,000 energy units\\. Each swipe earns you iAI coins\\!  
-⚡️ *Upgrade Your Core\\:* Boost your energy for higher earnings\\.  
-🏆 *Leaderboard\\:* Climb to the top for big rewards\\!  
-🎯 *Daily Missions\\:* Complete tasks for bonus coins\\.
+Hello, iAI Robot players!
 
-*Rewards*
-💰 Earn tokens every play 
-🎁 Complete quests for extra rewards  
-🏆 *Top 10* leaderboard winners share a *$200 USDT Prize Pool\\!*
+Our game is currently under maintenance to bring you a smoother and more exciting experience. 🚀 While 
+we’re fine-tuning, the game will be temporarily unavailable.
 
-*Ready to play?* Hit "*Play Game* 🎮" and start earning\\! 🔥`;
+We appreciate your patience and understanding as we work hard to improve your gaming adventure! Thank 
+you for being part of the iAI community—bigger and better things are coming your way soon!
+
+Stay tuned for updates! 💡
+
+✨ Your journey with iAI continues! ✨`;
 
     try {
         // Send the welcome image with a caption
