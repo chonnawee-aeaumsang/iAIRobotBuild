@@ -44,17 +44,17 @@ module.exports = async (req, res) => {
     // Escape necessary characters for MarkdownV2
     const welcomeMessage = `🛠 *Temporary Maintenance for iAI Robot Game* 🛠
 
-Hello, iAI Robot players\\!
+Hello, iAI Robot players\!
 
-Our game is currently under maintenance to bring you a smoother and more exciting experience\\. 🚀 While 
-we’re fine\\-tuning, the game will be temporarily unavailable\\.
+Our game is currently under maintenance to bring you a smoother and more exciting experience\. 🚀 While 
+we’re fine\-tuning, the game will be temporarily unavailable\.
 
-We appreciate your patience and understanding as we work hard to improve your gaming adventure\\! Thank 
-you for being part of the iAI community\\—bigger and better things are coming your way soon\\!
+We appreciate your patience and understanding as we work hard to improve your gaming adventure\! Thank 
+you for being part of the iAI community\—bigger and better things are coming your way soon\!
 
-Stay tuned for updates\\! 💡
+Stay tuned for updates\! 💡
 
-✨ Your journey with iAI continues\\! ✨`;
+✨ Your journey with iAI continues\! ✨`;
 
     try {
         // Send the welcome image with a caption
