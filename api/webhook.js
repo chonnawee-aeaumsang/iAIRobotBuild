@@ -27,14 +27,14 @@ module.exports = async (req, res) => {
             //}
             
 
-            // Handle /game command
-            if (update.message && (update.message.text === '/game')) {
-                const chatId = update.message.from.id;
-                const firstName = update.message.from.first_name;
+            // // Handle /game command
+            // if (update.message && (update.message.text === '/game')) {
+            //     const chatId = update.message.from.id;
+            //     const firstName = update.message.from.first_name;
                 
-                await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
-                await bot.sendGame(update.message.from.id, gameName);
-            }
+            //     await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
+            //     await bot.sendGame(update.message.from.id, gameName);
+            // }
 
             // Handle /start
             if (update.message && (update.message.text === '/start')) {
@@ -42,17 +42,18 @@ module.exports = async (req, res) => {
                 const firstName = update.message.from.first_name;
                             
     // Escape necessary characters for MarkdownV2
-    const welcomeMessage = `🛠 *Temporary Maintenance for iAI Robot Game* 🛠
+    const welcomeMessage = `🛠 *Game Access Closed for iAI Robot Game* 🛠
 
 Hello, iAI Robot players\\!
 
-Our game is currently under maintenance to bring you a smoother and more exciting experience\\. 🚀 While we’re fine\\-tuning, the game will be temporarily unavailable\\.
+The game access is now closed\\. Thank you so much for joining and being part of the fun\\! 🎮  
 
-We appreciate your patience and understanding as we work hard to improve your gaming adventure\\! Thank you for being part of the iAI community—bigger and better things are coming your way soon\\!
+Don’t worry if you missed out—you haven’t\\! 🚀 We’re preparing even more exciting activities just for you, with fresh chances to engage with the iAI ecosystem and earn amazing rewards\\. 🎁  
 
-Stay tuned for updates\\! 💡
+📣 Winner Announcement\\:  
+The leaderboard winners will be announced on 4th December 2024! Stay tuned to see if you're one of the lucky top players\\! 🏆  
 
-✨ Your journey with iAI continues\\! ✨`;
+✨ Your iAI adventure is only getting started\\! ✨`;
 
     try {
         // Send the welcome image with a caption
