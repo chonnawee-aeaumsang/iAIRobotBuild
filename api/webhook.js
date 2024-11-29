@@ -51,7 +51,7 @@ The game access is now closed\\. Thank you so much for joining and being part of
 Don’t worry if you missed out—you haven’t\\! 🚀 We’re preparing even more exciting activities just for you, with fresh chances to engage with the iAI ecosystem and earn amazing rewards\\. 🎁  
 
 📣 Winner Announcement\\:  
-The leaderboard winners will be announced on 4th December 2024! Stay tuned to see if you're one of the lucky top players\\! 🏆  
+The leaderboard winners will be announced on 4th December 2024\\! Stay tuned to see if you're one of the lucky top players\\! 🏆  
 
 ✨ Your iAI adventure is only getting started\\! ✨`;
 
