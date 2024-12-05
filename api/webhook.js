@@ -98,7 +98,7 @@ Prizes are distributed according to the T&amp;C of the project.
                 try {
                     // Send the welcome image with a caption
                     await bot.sendPhoto(chatId, imageUrl);
-                    await bot.sendMessage(chatId, welcomeMessage, { parse_mode: 'MarkdownV2' });
+                    await bot.sendMessage(chatId, welcomeMessage, { parse_mode: 'MarkdownV2', reply_markup: option });
 
                     // Check if the announcement has been sent already
                     if (!announcementSent) {
