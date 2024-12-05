@@ -75,7 +75,7 @@ The leaderboard winners will be announced on 4th December 2024\\! Stay tuned to 
 
 🎉 A big round of applause to our Top 10 players on the leaderboard who showcased exceptional skills and strategy! 🏆 You’ve won a share of the $200 USDT Prize Pool!
 
-📩 Winners, please DM our admin via RAKIB | iAI to share your details before 15 Dec 2024.
+📩 Winners, please DM our admin via <a href="https://t.me/Rakib1711">RAKIB | iAI</a> to share your details before 15 Dec 2024.
 <strong>Late claims will not be accepted</strong>.
 Prizes are distributed according to the T&amp;C of the project.
 
@@ -105,6 +105,34 @@ Prizes are distributed according to the T&amp;C of the project.
                 }
 
                 //await bot.sendGame(update.message.from.id, gameName);
+            }
+
+            // Handle /announcement
+            if (update.message && (update.message.text === '/announcement')) {
+                const chatId = update.message.from.id;
+                const firstName = update.message.from.first_name;
+
+                const announcementMessage = `🌟 Congratulations to the Winners of iAI Robot Game Prototype Phase I! 🌟
+
+🎉 A big round of applause to our Top 10 players on the leaderboard who showcased exceptional skills and strategy! 🏆 You’ve won a share of the $200 USDT Prize Pool!
+                                
+📩 Winners, please DM our admin via <a href="https://t.me/Rakib1711">RAKIB | iAI</a> to share your details before 15 Dec 2024.
+<strong>Late claims will not be accepted</strong>.
+Prizes are distributed according to the T&amp;C of the project.
+                                
+🚀 Thank you to all participants for making this phase a huge success! Stay tuned for more exciting challenges and rewards coming your way.
+———————————— 
+🤖 iAI – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future! 
+                                
+<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://discord.com/invite/cWFdnHCaAd">Discord</a> | <a href="https://www.facebook.com/profile.php?id=61566167991648&amp;mibextid=LQQJ4d">Facebook</a> | <a href="https://zealy.io/cw/iai/questboard">QuestsFullname</a>`;
+
+
+                try {
+                    await bot.sendPhoto(chatId, announceimageUrl);
+                    await bot.sendMessage(chatId, announcementMessage, { parse_mode: 'HTML' });
+                } catch (error) {
+                    console.error("Error sending welcome message:", error);
+                }
             }
 
             // Handle callback query for the Play button
