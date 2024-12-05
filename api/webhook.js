@@ -56,6 +56,16 @@ module.exports = async (req, res) => {
                 const chatId = update.message.from.id;
                 const firstName = update.message.from.first_name;
 
+                const option = {
+                    reply_markup: {
+                        keyboard: [
+                            [{ text: '/announcement' }],
+                        ],
+                        resize_keyboard: true, 
+                        one_time_keyboard: true 
+                    }
+                };
+
                 // Escape necessary characters for MarkdownV2
                 const welcomeMessage = `🛠 *Game Access Closed for iAI Robot Game* 🛠
 
@@ -129,7 +139,7 @@ Prizes are distributed according to the T&amp;C of the project.
 
                 try {
                     await bot.sendPhoto(chatId, announceimageUrl);
-                    await bot.sendMessage(chatId, announcementMessage, { parse_mode: 'HTML' });
+                    await bot.sendMessage(chatId, announcementMessage,option, { parse_mode: 'HTML' });
                 } catch (error) {
                     console.error("Error sending welcome message:", error);
                 }
