@@ -42,14 +42,14 @@ module.exports = async (req, res) => {
             //}
 
 
-            // // Handle /game command
-            // if (update.message && (update.message.text === '/game')) {
-            //     const chatId = update.message.from.id;
-            //     const firstName = update.message.from.first_name;
+             // Handle /game command
+             if (update.message && (update.message.text === '/game01')) {
+                 const chatId = update.message.from.id;
+                 const firstName = update.message.from.first_name;
 
-            //     await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
-            //     await bot.sendGame(update.message.from.id, gameName);
-            // }
+                 //await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
+                 await bot.sendGame(update.message.from.id, gameName);
+             }
 
             // Handle /start
             if (update.message && (update.message.text === '/start')) {
