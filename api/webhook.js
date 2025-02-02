@@ -70,22 +70,23 @@ module.exports = async (req, res) => {
                 const welcomeMessage = `Ready for the Swiping Challenge?
 
 🔥 <b>The iAI Robot Game is LIVE!</b> 🔥  
-Swipe, collect iAI tokens, and compete for big rewards!
+Swipe, collect iAI tokens, and compete for </b>big rewards!</b>
 
 🕹 <b>How to Play:</b>  
-• <b>Swipe & Collect</b> – Start with 1,000 energy units and earn iAI coins!  
+• <b>Swipe & Collect</b> – Start with </b>1,000 energy units</b> and earn </b>iAI coins!</b>
 • <b>Upgrade Your Core</b> – Boost energy for higher rewards!  
-• <b>Climb the Leaderboard</b> – Compete for top prizes!  
-• <b>Daily Missions</b> – Complete tasks for bonus coins & perks!  
+• <b>Climb the Leaderboard</b> – Compete for </b>top prizes!</b>
+• <b>Daily Missions</b> – Complete tasks for </b>bonus coins & perks!</b>  
 
-🎁 <b>Rewards:</b>  
-• Earn iAI tokens every play!  
-• Complete quests for extra bonuses!  
-• <b>ALL players share $iAI Tokens</b> (Details in the Snapshot Event!)
+🎁 <b>Rewards!</b>  
+• Earn <b>iAI tokens<b> every play!  
+• Complete <b>quests<b> for extra bonuses!  
+• <b>ALL players<b> share <b>$iAI Tokens</b> (Details in the Snapshot Event!)
 
-🔥 Hit <b>"Play Game 🎮"</b> NOW and start swiping!   
+🔥 </b>Hit "Play Game 🎮" NOW and start swiping!</b>   
 ———————————— 
-<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://www.facebook.com/profile.php?id=61566167991648">Facebook</a> | <a href="https://zealy.io/cw/iai/questboard">QuestsFullname</a>`;
+🤖 <b>iAI<b> – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future! 
+<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://linktr.ee/iai_center">Social Media</a> | <a href="https://zealy.io/cw/iai/questboard">Quests</a>`;
                 try {
                     // Send the welcome image with a caption
                     await bot.sendPhoto(chatId, imageUrl);
