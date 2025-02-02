@@ -70,18 +70,18 @@ module.exports = async (req, res) => {
                 const welcomeMessage = `Ready for the Swiping Challenge\\?
 
 🔥 The iAI Robot Game is LIVE\\! 🔥
-Swipe, collect iAI tokens, and compete for big rewards!
+Swipe, collect iAI tokens, and compete for big rewards\\!
 
-🕹 How to Play:
+🕹 How to Play\\:
 • Swipe & Collect – Start with 1,000 energy units and earn iAI coins\\!
 • Upgrade Your Core – Boost energy for higher rewards\\!
 • Climb the Leaderboard – Compete for top prizes\\!
-• Daily Missions – Complete tasks for bonus coins & perks!
+• Daily Missions – Complete tasks for bonus coins & perks\\!
 
- 🎁 Rewards!
+🎁 Rewards\\!
 • Earn iAI tokens every play\\!
 • Complete quests for extra bonuses\\!
-• ALL players share $iAI Tokens (Details in the Snapshot Event\\!)
+• ALL players share $iAI Tokens \\(Details in the Snapshot Event\\!\\)
 
 🔥 Hit  "Play Game 🎮" NOW and start swiping\\!
 ———————————— 
