@@ -70,22 +70,22 @@ module.exports = async (req, res) => {
                 const welcomeMessage = `Ready for the Swiping Challenge?
 
 🔥 <b>The iAI Robot Game is LIVE!</b> 🔥  
-Swipe, collect iAI tokens, and compete for </b>big rewards!</b>
+Swipe, collect iAI tokens, and compete for <b>big rewards!</b>
 
 🕹 <b>How to Play:</b>  
-• <b>Swipe & Collect</b> – Start with </b>1,000 energy units</b> and earn </b>iAI coins!</b>
+• <b>Swipe & Collect</b> – Start with <b>1,000 energy units</b> and earn <b>iAI coins!</b>  
 • <b>Upgrade Your Core</b> – Boost energy for higher rewards!  
-• <b>Climb the Leaderboard</b> – Compete for </b>top prizes!</b>
-• <b>Daily Missions</b> – Complete tasks for </b>bonus coins & perks!</b>  
+• <b>Climb the Leaderboard</b> – Compete for <b>top prizes!</b>  
+• <b>Daily Missions</b> – Complete tasks for <b>bonus coins & perks!</b>  
 
 🎁 <b>Rewards!</b>  
-• Earn <b>iAI tokens<b> every play!  
-• Complete <b>quests<b> for extra bonuses!  
-• <b>ALL players<b> share <b>$iAI Tokens</b> (Details in the Snapshot Event!)
+• Earn <b>iAI tokens</b> every play!  
+• Complete <b>quests</b> for extra bonuses!  
+• <b>ALL players</b> share <b>$iAI Tokens</b> (Details in the Snapshot Event!)  
 
-🔥 </b>Hit "Play Game 🎮" NOW and start swiping!</b>   
-———————————— 
-🤖 <b>iAI<b> – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future! 
+🔥 <b>Hit "Play Game 🎮" NOW and start swiping!</b>  
+————————————  
+🤖 <b>iAI</b> – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future!  
 <a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://linktr.ee/iai_center">Social Media</a> | <a href="https://zealy.io/cw/iai/questboard">Quests</a>`;
                 try {
                     // Send the welcome image with a caption
