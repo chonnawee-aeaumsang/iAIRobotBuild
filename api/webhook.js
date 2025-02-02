@@ -67,41 +67,29 @@ module.exports = async (req, res) => {
                 };
 
                 // Escape necessary characters for MarkdownV2
-                const welcomeMessage = `Ready for the Swiping Challenge\\?
+                const welcomeMessage = `Ready for the Swiping Challenge?
 
-🔥 The iAI Robot Game is LIVE\\! 🔥
-Swipe, collect iAI tokens, and compete for big rewards\\!
+🔥 <b>The iAI Robot Game is LIVE!</b> 🔥  
+Swipe, collect iAI tokens, and compete for big rewards!
 
-🕹 How to Play\\:
-• Swipe & Collect – Start with 1,000 energy units and earn iAI coins\\!
-• Upgrade Your Core – Boost energy for higher rewards\\!
-• Climb the Leaderboard – Compete for top prizes\\!
-• Daily Missions – Complete tasks for bonus coins & perks\\!
+🕹 <b>How to Play:</b>  
+• <b>Swipe & Collect</b> – Start with 1,000 energy units and earn iAI coins!  
+• <b>Upgrade Your Core</b> – Boost energy for higher rewards!  
+• <b>Climb the Leaderboard</b> – Compete for top prizes!  
+• <b>Daily Missions</b> – Complete tasks for bonus coins & perks!  
 
-🎁 Rewards\\!
-• Earn iAI tokens every play\\!
-• Complete quests for extra bonuses\\!
-• ALL players share $iAI Tokens \\(Details in the Snapshot Event\\!\\)
+🎁 <b>Rewards:</b>  
+• Earn iAI tokens every play!  
+• Complete quests for extra bonuses!  
+• <b>ALL players share $iAI Tokens</b> (Details in the Snapshot Event!)
 
-🔥 Hit  "Play Game 🎮" NOW and start swiping\\!
+🔥 Hit <b>"Play Game 🎮"</b> NOW and start swiping!   
 ———————————— 
-<a href\\="https://t\\.me/iai_announcement">Telegram</a> | <a href\\="https://x\\.com/iai_center?s\\=21">X</a> | <a href\\="https://www\\.facebook\\.com/profile\\.php?id\\=61566167991648&amp;mibextid\\=LQQJ4d">Facebook</a> | <a href\\="https://zealy\\.io/cw/iai/questboard">QuestsFullname</a>`;
-
+<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://www.facebook.com/profile.php?id=61566167991648">Facebook</a> | <a href="https://zealy.io/cw/iai/questboard">QuestsFullname</a>`;
                 try {
                     // Send the welcome image with a caption
                     await bot.sendPhoto(chatId, imageUrl);
-                    await bot.sendMessage(chatId, welcomeMessage, { parse_mode: 'MarkdownV2', reply_markup: option });
-
-                    // Check if the announcement has been sent already
-                    if (!announcementSent) {
-                        // Send the second message (Announcement)
-                        await bot.sendPhoto(chatId, announceimageUrl);
-                        await bot.sendMessage(chatId, announcementMessage, { parse_mode: 'HTML' });
-
-                        // Update the flag to mark the announcement as sent
-                        announcementSent = true;
-                        fs.writeFileSync(announcementSentFile, JSON.stringify({ sent: true }));
-                    }
+                    await bot.sendMessage(chatId, welcomeMessage, { parse_mode: 'HTML', reply_markup: option });
                 } catch (error) {
                     console.error("Error sending welcome message:", error);
                 }
