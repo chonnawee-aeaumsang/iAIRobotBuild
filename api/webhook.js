@@ -67,33 +67,25 @@ module.exports = async (req, res) => {
                 };
 
                 // Escape necessary characters for MarkdownV2
-                const welcomeMessage = `🛠 *Game Access Closed for iAI Robot Game* 🛠
+                const welcomeMessage = `Ready for the Swiping Challenge\\?
 
-Hello, iAI Robot players\\!
+🔥 The iAI Robot Game is LIVE\\! 🔥
+Swipe, collect iAI tokens, and compete for big rewards!
 
-The game access is now closed\\. Thank you so much for joining and being part of the fun\\! 🎮  
+🕹 How to Play:
+• Swipe & Collect – Start with 1,000 energy units and earn iAI coins\\!
+• Upgrade Your Core – Boost energy for higher rewards\\!
+• Climb the Leaderboard – Compete for top prizes\\!
+• Daily Missions – Complete tasks for bonus coins & perks!
 
-Don’t worry if you missed out—you haven’t\\! 🚀 We’re preparing even more exciting activities just for you, with fresh chances to engage with the iAI ecosystem and earn amazing rewards\\. 🎁  
+ 🎁 Rewards!
+• Earn iAI tokens every play\\!
+• Complete quests for extra bonuses\\!
+• ALL players share $iAI Tokens (Details in the Snapshot Event\\!)
 
-📣 Winner Announcement\\:  
-The leaderboard winners will be announced on 4th December 2024\\! Stay tuned to see if you're one of the lucky top players\\! 🏆  
-
-✨ Your iAI adventure is only getting started\\! ✨`;
-
-                // Announcement message to be sent separately
-                const announcementMessage = `🌟 Congratulations to the Winners of iAI Robot Game Prototype Phase I! 🌟
-
-🎉 A big round of applause to our Top 10 players on the leaderboard who showcased exceptional skills and strategy! 🏆 You’ve won a share of the $200 USDT Prize Pool!
-
-📩 Winners, please DM our admin via <a href="https://t.me/Rakib1711">RAKIB | iAI</a> to share your details before 15 Dec 2024.
-<strong>Late claims will not be accepted</strong>.
-Prizes are distributed according to the T&amp;C of the project.
-
-🚀 Thank you to all participants for making this phase a huge success! Stay tuned for more exciting challenges and rewards coming your way.
+🔥 Hit  "Play Game 🎮" NOW and start swiping\\!
 ———————————— 
-🤖 iAI – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future! 
-
-<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://discord.com/invite/cWFdnHCaAd">Discord</a> | <a href="https://www.facebook.com/profile.php?id=61566167991648&amp;mibextid=LQQJ4d">Facebook</a> | <a href="https://zealy.io/cw/iai/questboard">QuestsFullname</a>`;
+<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://www.facebook.com/profile.php?id=61566167991648&amp;mibextid=LQQJ4d">Facebook</a> | <a href="https://zealy.io/cw/iai/questboard">QuestsFullname</a>`;
 
                 try {
                     // Send the welcome image with a caption
@@ -116,35 +108,6 @@ Prizes are distributed according to the T&amp;C of the project.
 
                 //await bot.sendGame(update.message.from.id, gameName);
             }
-
-            // Handle /announcement
-            if (update.message && (update.message.text === '/announcement')) {
-                const chatId = update.message.from.id;
-                const firstName = update.message.from.first_name;
-
-                const announcementMessage = `🌟 Congratulations to the Winners of iAI Robot Game Prototype Phase I! 🌟
-
-🎉 A big round of applause to our Top 10 players on the leaderboard who showcased exceptional skills and strategy! 🏆 You’ve won a share of the $200 USDT Prize Pool!
-                                
-📩 Winners, please DM our admin via <a href="https://t.me/Rakib1711">RAKIB | iAI</a> to share your details before 15 Dec 2024.
-<strong>Late claims will not be accepted</strong>.
-Prizes are distributed according to the T&amp;C of the project.
-                                
-🚀 Thank you to all participants for making this phase a huge success! Stay tuned for more exciting challenges and rewards coming your way.
-———————————— 
-🤖 iAI – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future! 
-                                
-<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://discord.com/invite/cWFdnHCaAd">Discord</a> | <a href="https://www.facebook.com/profile.php?id=61566167991648&amp;mibextid=LQQJ4d">Facebook</a> | <a href="https://zealy.io/cw/iai/questboard">QuestsFullname</a>`;
-
-
-                try {
-                    await bot.sendPhoto(chatId, announceimageUrl);
-                    await bot.sendMessage(chatId, announcementMessage,option, { parse_mode: 'HTML' });
-                } catch (error) {
-                    console.error("Error sending welcome message:", error);
-                }
-            }
-
             // Handle callback query for the Play button
             if (update.callback_query) {
                 if (update.callback_query.game_short_name.toLowerCase() !== gameName.toLowerCase()) {
