@@ -17,7 +17,7 @@ if (fs.existsSync(announcementSentFile)) {
 const TOKEN = "7498251188:AAGYxE1L2aGuTXx-VdjQHZn9UQRSK6svJmw";
 const gameName = "iAIGame"; // Replace with your game's short name
 const gameUrl = "https://iai-robot.vercel.app/"; // Your game URL
-const imageUrl = "https://imgur.com/a/tLemH6f"
+const imageUrl = "https://imgur.com/a/UoLLqFr"
 const announceimageUrl = "https://imgur.com/a/xBPobO0";
 
 const bot = new TelegramBot(TOKEN, { polling: false });
@@ -71,7 +71,9 @@ module.exports = async (req, res) => {
 
 A massive THANK YOU to everyone who joined the Swiping Challenge! 🙌
 
-🔥 You swiped, collected, and conquered — and we’re grateful for your amazing participation!`;
+🔥 You swiped, collected, and conquered — and we’re grateful for your amazing participation!
+
+Stay tuned for exciting future opportunities to engage with us. This is just the beginning!`;
                 try {
                     // Send the welcome image with a caption
                     await bot.sendPhoto(chatId, imageUrl);
