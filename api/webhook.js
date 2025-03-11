@@ -67,16 +67,11 @@ module.exports = async (req, res) => {
                 };
 
                 // Escape necessary characters for MarkdownV2
-                const welcomeMessage = `Ready for the Swiping Challenge?
-
-🎮 <b>iAI Robot Game Has Ended!<b> 🎮
+                const welcomeMessage = `🎮 iAI Robot Game Has Ended! 🎮
 
 A massive THANK YOU to everyone who joined the Swiping Challenge! 🙌
 
-🔥 You swiped, collected, and conquered — and we’re grateful for your amazing participation! 
-————————————  
-🤖 <b>iAI</b> – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future!  
-<a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://linktr.ee/iai_center">Social Media</a> | <a href="https://zealy.io/cw/iai/questboard">Quests</a>`;
+🔥 You swiped, collected, and conquered — and we’re grateful for your amazing participation!`;
                 try {
                     // Send the welcome image with a caption
                     await bot.sendPhoto(chatId, imageUrl);
