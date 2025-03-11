@@ -43,13 +43,13 @@ module.exports = async (req, res) => {
 
 
              // Handle /game command
-             if (update.message && (update.message.text === '/game01')) {
-                 const chatId = update.message.from.id;
-                 const firstName = update.message.from.first_name;
+            //  if (update.message && (update.message.text === '/game01')) {
+            //      const chatId = update.message.from.id;
+            //      const firstName = update.message.from.first_name;
 
-                 //await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
-                 await bot.sendGame(update.message.from.id, gameName);
-             }
+            //      //await bot.sendMessage(chatId, `Welcome, ${firstName}! Let's play ${gameName}.`);
+            //      await bot.sendGame(update.message.from.id, gameName);
+            //  }
 
             // Handle /start
             if (update.message && (update.message.text === '/start')) {
@@ -69,21 +69,11 @@ module.exports = async (req, res) => {
                 // Escape necessary characters for MarkdownV2
                 const welcomeMessage = `Ready for the Swiping Challenge?
 
-🔥 <b>The iAI Robot Game is LIVE!</b> 🔥  
-Swipe, collect iAI tokens, and compete for <b>big rewards!</b>
+🎮 <b>iAI Robot Game Has Ended!<b> 🎮
 
-🕹 <b>How to Play:</b>  
-• <b>Swipe & Collect</b> – Start with <b>1,000 energy units</b> and earn <b>iAI coins!</b>  
-• <b>Upgrade Your Core</b> – Boost energy for higher rewards!  
-• <b>Climb the Leaderboard</b> – Compete for <b>top prizes!</b>  
-• <b>Daily Missions</b> – Complete tasks for <b>bonus coins & perks!</b>  
+A massive THANK YOU to everyone who joined the Swiping Challenge! 🙌
 
-🎁 <b>Rewards!</b>  
-• Earn <b>iAI tokens</b> every play!  
-• Complete <b>quests</b> for extra bonuses!  
-• <b>ALL players</b> share <b>$iAI Tokens</b> (Details in the Snapshot Event!)  
-
-🔥 <b>Hit "Play Game 🎮" NOW and start swiping!</b>  
+🔥 You swiped, collected, and conquered — and we’re grateful for your amazing participation! 
 ————————————  
 🤖 <b>iAI</b> – Where AI, Web3, and sustainability meet to create smarter, greener solutions for the future!  
 <a href="https://t.me/iai_announcement">Telegram</a> | <a href="https://x.com/iai_center?s=21">X</a> | <a href="https://linktr.ee/iai_center">Social Media</a> | <a href="https://zealy.io/cw/iai/questboard">Quests</a>`;
