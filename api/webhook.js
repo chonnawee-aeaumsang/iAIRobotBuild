@@ -67,7 +67,7 @@ module.exports = async (req, res) => {
                 };
 
                 // Escape necessary characters for MarkdownV2
-                const welcomeMessage = `🎮 iAI Robot Game Has Ended! 🎮
+                const welcomeMessage = `🎮 <b>iAI Robot Game Has Ended!</b> 🎮
 
 A massive THANK YOU to everyone who joined the Swiping Challenge! 🙌
 
